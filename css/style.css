@@ -215,10 +215,9 @@ button {
 .cart__img {
   display: block;
   color: #69707d;
-  transition: color 0.3s ease;
 }
 
-.cart__img:hover {
+.cart:hover .cart__img {
   color: var(--black);
 }
 
