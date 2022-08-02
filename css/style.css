@@ -557,9 +557,6 @@ button {
   opacity: 0.6;
 }
 
-.modal__imgs {
-}
-
 .modal__imgs .block__imgs {
   width: 100%;
   max-width: 550px;
@@ -603,20 +600,10 @@ button {
   cursor: auto;
   width: 100%;
 }
-.modal__imgs .block__img-big {
-}
-
-
 
 .modal__imgs .block__thumbs {
   justify-content: center;
 }
-
-
-
-
-
-
 
 /* CONtent */
 .block__content {
