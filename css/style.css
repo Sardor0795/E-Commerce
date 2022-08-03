@@ -633,13 +633,32 @@ button {
   display: block;
 }
 
-
 /* CONtent */
 .block__content {
   max-width: 445px;
   width: 100%;
   background-color: #151414;
 }
+
+/* Body scroll */
+
+body::-webkit-scrollbar {
+  width: 8px; /* Mostly for vertical scrollbars */
+  border-radius: 25px;
+}
+
+body::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: #ff7e1b;
+  border-radius: 25px;
+}
+
+body::-webkit-scrollbar-track {
+  /* Background */
+  background: rgba(225, 220, 220, 0.845);
+  border-radius: 25px;
+}
+
 /* RETINA BG */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
