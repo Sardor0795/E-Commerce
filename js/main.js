@@ -16,8 +16,6 @@ elsBtns.forEach(function (elBtn) {
       btn.classList.remove("active");
     });
     elBtn.classList.add("active");
-    console.log(elBtn.dataset.imgBig);
-    console.log(elBigImg.src);
     elBigImg.src = elBtn.dataset.imgBig;
   });
 });
@@ -43,24 +41,49 @@ const elsModalBtns = document.querySelectorAll(".js-modal-btn");
 const elModalBigImg = document.querySelector(".js-modal-img-big");
 const elNext = document.querySelector(".btn--next");
 const elPrev = document.querySelector(".btn--prev");
+const elsBlockModalThumbs = document.querySelectorAll(".js-block-modal-thumbs");
+
+elNext.addEventListener("click", function () {
+  const modal = document.querySelector(".modal__imgs");
+  const active = modal.querySelector(".active");
+  active.classList.remove("active");
+
+  if (active.nextElementSibling === null) {
+    elsBlockModalThumbs[0].classList.add("active");
+  } else {
+    active.nextElementSibling.classList.add("active");
+  }
+
+  if (active.nextElementSibling === null) {
+    elModalBigImg.src = elsBlockModalThumbs[0].dataset.imgBig;
+  }
+  elModalBigImg.src = active.nextElementSibling.dataset.imgBig;
+});
+
+elPrev.addEventListener("click", function () {
+  const modal = document.querySelector(".modal__imgs");
+  const active = modal.querySelector(".active");
+  active.classList.remove("active");
+  const prev = elsBlockModalThumbs.length - 1;
+
+  if (active.previousElementSibling === null) {
+    elsBlockModalThumbs[prev].classList.add("active");
+  } else {
+    active.previousElementSibling.classList.add("active");
+  }
+
+  if (active.previousElementSibling === null) {
+    elModalBigImg.src = elsBlockModalThumbs[prev].dataset.imgBig;
+  }
+  elModalBigImg.src = active.previousElementSibling.dataset.imgBig;
+});
 
 elsModalBtns.forEach(function (elBtn) {
   elBtn.addEventListener("click", function () {
     elsModalBtns.forEach(function (btn) {
-      btn.classList.remove("active");
+      btn.parentElement.classList.remove("active");
     });
-    elBtn.classList.add("active");
-    console.log(elBtn.dataset.imgBig);
-    console.log(elModalBigImg.src);
+    elBtn.parentElement.classList.add("active");
     elModalBigImg.src = elBtn.dataset.imgBig;
-  });
-});
-
-elNext.addEventListener("click", function () {
-  elsModalBtns.forEach(function (btn) {
-    if (btn.classList.contains("active")) {
-      btn.classList.remove("active");
-      
-    }
   });
 });
