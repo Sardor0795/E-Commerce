@@ -523,11 +523,6 @@ button {
   display: none;
 }
 
-.modal::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
 .modal__inner {
   max-width: 550px;
   margin-right: auto;
@@ -633,6 +628,24 @@ button {
   display: block;
 }
 
+.modal::-webkit-scrollbar {
+  width: 8px; /* Mostly for vertical scrollbars */
+  border-radius: 25px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: #ff7e1b;
+  border-radius: 25px;
+}
+
+.modal::-webkit-scrollbar-track {
+  /* Background */
+  background: rgba(225, 220, 220, 0.845);
+  border-radius: 25px;
+}
+
+
 /* CONtent */
 .block__content {
   max-width: 445px;
@@ -641,6 +654,10 @@ button {
 }
 
 /* Body scroll */
+
+body.scroll-close::-webkit-scrollbar {
+  width: 0;
+}
 
 body::-webkit-scrollbar {
   width: 8px; /* Mostly for vertical scrollbars */

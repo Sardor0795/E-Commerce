@@ -28,11 +28,13 @@ const elModalXBtn = document.querySelector(".modal__x-btn");
 elBigImg.addEventListener("click", function () {
   elModal.classList.remove("modal--close");
   elModal.classList.add("modal--open");
+  document.body.classList.add("scroll-close");
 });
 
 elModalXBtn.addEventListener("click", function () {
   elModal.classList.remove("modal--open");
   elModal.classList.add("modal--close");
+  document.body.classList.remove("scroll-close");
 });
 
 // Modal btn
