@@ -512,6 +512,7 @@ button {
   padding-bottom: 69px;
   overflow: auto;
   display: none;
+  z-index: 9999;
 }
 
 .modal--open {
