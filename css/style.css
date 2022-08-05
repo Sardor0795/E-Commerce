@@ -675,9 +675,6 @@ body::-webkit-scrollbar-track {
   padding-top: 62px;
 }
 
-.content {
-}
-
 .content__info {
   font-weight: 700;
   font-size: 13px;
@@ -708,9 +705,6 @@ body::-webkit-scrollbar-track {
 
 .content__prices {
   margin-bottom: 32px;
-}
-
-.prices {
 }
 
 .prices__new {
@@ -748,9 +742,6 @@ body::-webkit-scrollbar-track {
   align-items: center;
 }
 
-.btns {
-}
-
 .btns__count {
   margin-right: 16px;
 }
@@ -762,6 +753,7 @@ body::-webkit-scrollbar-track {
   border-radius: 10px;
   overflow: hidden;
   min-width: 157px;
+  line-height: normal;
 }
 
 .count__calc {
@@ -770,7 +762,7 @@ body::-webkit-scrollbar-track {
   font-size: 25px;
   color: var(--main-color);
   font-weight: bold;
-  line-height: 10px;
+  position: relative;
 }
 
 .count__calc:hover {
@@ -785,9 +777,24 @@ body::-webkit-scrollbar-track {
   opacity: 0.6;
 }
 
+.count__calc span {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+
 .count__display {
   text-align: center;
   width: 30%;
+  font-weight: bold;
+  color: var(--black);
 }
 
 .btns__cart {
