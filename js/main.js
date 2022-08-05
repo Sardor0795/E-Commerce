@@ -89,3 +89,19 @@ elsModalBtns.forEach(function (elBtn) {
     elModalBigImg.src = elBtn.dataset.imgBig;
   });
 });
+
+// Count items
+
+const elDecBtn = document.querySelector(".js-dec-btn");
+const elIncBtn = document.querySelector(".js-inc-btn");
+const elCountDisplay = document.querySelector(".js-count-display");
+
+elIncBtn.addEventListener("click", function () {
+  elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) + 1;
+});
+
+elDecBtn.addEventListener("click", function () {
+  if (parseInt(elCountDisplay.textContent, 10) > 0) {
+    elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) - 1;
+  }
+});

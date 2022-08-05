@@ -767,7 +767,6 @@ body::-webkit-scrollbar-track {
 .count__calc {
   min-height: 56px;
   width: 35%;
-  text-align: center;
   font-size: 25px;
   color: var(--main-color);
   font-weight: bold;
