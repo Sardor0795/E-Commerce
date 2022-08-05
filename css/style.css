@@ -359,11 +359,15 @@ body::-webkit-scrollbar-track {
 
 .inner__delete {
   display: flex;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 .inner__delete:hover {
   opacity: 0.8;
+}
+
+.inner__delete:hover img {
+  filter: brightness(0.5);
 }
 
 .inner__delete:active {
@@ -787,7 +791,6 @@ body::-webkit-scrollbar-track {
   top: 0;
   bottom: 0;
   margin: auto;
-
 }
 
 .count__display {
