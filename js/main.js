@@ -1,5 +1,6 @@
 const elCartInner = document.querySelector(".cart__inner");
 const elCartBtn = document.querySelector(".cart__btn");
+const elCartCount = document.querySelector(".js-cart-count");
 
 elCartBtn.addEventListener("click", function () {
   elCartInner.classList.toggle("open");
@@ -98,10 +99,12 @@ const elCountDisplay = document.querySelector(".js-count-display");
 
 elIncBtn.addEventListener("click", function () {
   elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) + 1;
+  elCartCount.textContent = elCountDisplay.textContent
 });
 
 elDecBtn.addEventListener("click", function () {
   if (parseInt(elCountDisplay.textContent, 10) > 0) {
     elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) - 1;
+    elCartCount.textContent = elCountDisplay.textContent
   }
 });
