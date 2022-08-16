@@ -168,6 +168,7 @@ body::-webkit-scrollbar-track {
 
 .logo:active {
   opacity: 0.6;
+  transform: translateY(2px);
 }
 
 .logo__img {
@@ -202,6 +203,7 @@ body::-webkit-scrollbar-track {
 
 .nav__link:active {
   opacity: 0.6;
+  transform: translateY(2px);
 }
 
 .nav__link::after {
@@ -217,6 +219,11 @@ body::-webkit-scrollbar-track {
 
 .nav__link:hover::after {
   display: block;
+}
+
+.nav__link:active::after {
+  display: block;
+  transform: translateY(-2px);
 }
 
 .site-header__cart-wrapper {
@@ -237,6 +244,7 @@ body::-webkit-scrollbar-track {
 
 .cart__btn:active {
   opacity: 0.6;
+  transform: translateY(2px);
 }
 
 .cart__img {
@@ -387,6 +395,10 @@ body::-webkit-scrollbar-track {
   overflow: hidden;
 }
 
+.user:active {
+  transform: translateY(2px);
+}
+
 .user__img {
   width: 50px;
   height: 50px;
@@ -455,6 +467,10 @@ body::-webkit-scrollbar-track {
   overflow: hidden;
 }
 
+.block__img-big:active {
+  transform: scale(0.99);
+}
+
 .block__thumbs {
   display: flex;
   overflow: auto;
@@ -489,6 +505,7 @@ body::-webkit-scrollbar-track {
 
 .block__btn:active {
   opacity: 0.6;
+  transform: scale(0.95);
 }
 
 .block__btn::after {
@@ -577,6 +594,7 @@ body::-webkit-scrollbar-track {
 
 .modal__x-btn-img:active {
   opacity: 0.6;
+  transform: scale(0.95);
 }
 
 .modal__imgs .block__imgs {
@@ -602,6 +620,7 @@ body::-webkit-scrollbar-track {
 
 .modal__btns:active {
   opacity: 0.6;
+  transform: scale(0.95);
 }
 
 .modal__btns:hover svg {
@@ -779,6 +798,7 @@ body::-webkit-scrollbar-track {
   background-color: var(--main-color);
   color: #fff;
   opacity: 0.6;
+  transform: scale(0.95);
 }
 
 .count__calc span {
