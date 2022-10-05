@@ -116,5 +116,5 @@ const elLoader = document.querySelector(".loader-wrapper");
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     elLoader.classList.add("close");
-  }, 1000);
+  }, 800);
 });
