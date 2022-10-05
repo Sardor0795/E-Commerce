@@ -99,12 +99,24 @@ const elCountDisplay = document.querySelector(".js-count-display");
 
 elIncBtn.addEventListener("click", function () {
   elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) + 1;
-  elCartCount.textContent = elCountDisplay.textContent
+  elCartCount.textContent = elCountDisplay.textContent;
 });
 
 elDecBtn.addEventListener("click", function () {
   if (parseInt(elCountDisplay.textContent, 10) > 0) {
     elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) - 1;
-    elCartCount.textContent = elCountDisplay.textContent
+    elCartCount.textContent = elCountDisplay.textContent;
   }
 });
+
+// Loader
+
+const elLoader = document.querySelector(".loader-wrapper");
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    elLoader.classList.add("close");
+  },
+  1000
+);
