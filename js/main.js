@@ -113,10 +113,8 @@ elDecBtn.addEventListener("click", function () {
 
 const elLoader = document.querySelector(".loader-wrapper");
 
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
     elLoader.classList.add("close");
-  },
-  1000
-);
+  }, 1000);
+});
