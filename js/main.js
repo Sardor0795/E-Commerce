@@ -118,3 +118,17 @@ document.addEventListener("DOMContentLoaded", () => {
     elLoader.classList.add("close");
   }, 800);
 });
+
+// Modal menu
+
+const elMenuBtn = document.querySelector(".site-header__menu");
+const elCloseBtn = document.querySelector(".nav__close-btn");
+const elNav = document.querySelector(".nav");
+
+elMenuBtn.addEventListener("click", () => {
+  elNav.classList.add("open");
+});
+
+elCloseBtn.addEventListener("click", () => {
+  elNav.classList.remove("open");
+});
