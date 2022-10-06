@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const elMenuBtn = document.querySelector(".site-header__menu");
 const elCloseBtn = document.querySelector(".nav__close-btn");
 const elNav = document.querySelector(".nav");
+const elNavCloserWindow = document.querySelector(".nav__window-closer");
 
 elMenuBtn.addEventListener("click", () => {
   elNav.classList.add("open");
@@ -141,3 +142,7 @@ elMenuBtn.addEventListener("click", () => {
 elCloseBtn.addEventListener("click", () => {
   elNav.classList.remove("open");
 });
+
+elNavCloserWindow.onclick = () => {
+  elNav.classList.remove("open");
+};

@@ -968,6 +968,16 @@ body::-webkit-scrollbar-track {
     transform: translateX(-1000px);
   }
 
+  .nav__window-closer {
+    display: block;
+    position: absolute;
+    width: 40%;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: transparent;
+  }
+
   .nav.open {
     transform: translateX(0);
   }
