@@ -1,9 +1,18 @@
 const elCartInner = document.querySelector(".cart__inner");
 const elCartBtn = document.querySelector(".cart__btn");
 const elCartCount = document.querySelector(".js-cart-count");
+const elCartCloseWindow = document.querySelector(".cart-closer-window");
 
 elCartBtn.addEventListener("click", function () {
   elCartInner.classList.toggle("open");
+  elCartCloseWindow.classList.add("open");
+});
+
+// Cart closer window
+
+elCartCloseWindow.addEventListener("click", () => {
+  elCartInner.classList.remove("open");
+  elCartCloseWindow.classList.remove("open");
 });
 
 // BTN ACTIVE

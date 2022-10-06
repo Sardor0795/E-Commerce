@@ -298,6 +298,18 @@ body::-webkit-scrollbar-track {
   display: none;
 }
 
+.cart-closer-window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: none;
+}
+
+.cart-closer-window.open {
+  display: block;
+}
+
 .inner.open {
   display: block;
 }
