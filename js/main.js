@@ -100,24 +100,6 @@ elsModalBtns.forEach(function (elBtn) {
   });
 });
 
-// Count items
-
-const elDecBtn = document.querySelector(".js-dec-btn");
-const elIncBtn = document.querySelector(".js-inc-btn");
-const elCountDisplay = document.querySelector(".js-count-display");
-
-elIncBtn.addEventListener("click", function () {
-  elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) + 1;
-  elCartCount.textContent = elCountDisplay.textContent;
-});
-
-elDecBtn.addEventListener("click", function () {
-  if (parseInt(elCountDisplay.textContent, 10) > 0) {
-    elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) - 1;
-    elCartCount.textContent = elCountDisplay.textContent;
-  }
-});
-
 // Loader
 
 const elLoader = document.querySelector(".loader-wrapper");
@@ -145,4 +127,29 @@ elCloseBtn.addEventListener("click", () => {
 
 elNavCloserWindow.onclick = () => {
   elNav.classList.remove("open");
+};
+
+// Count items
+
+const elDecBtn = document.querySelector(".js-dec-btn");
+const elIncBtn = document.querySelector(".js-inc-btn");
+const elCountDisplay = document.querySelector(".js-count-display");
+const elAddToCartBtn = document.querySelector(".btns__cart");
+const elCalculatedPrice = document.querySelector(".info__price");
+
+elIncBtn.addEventListener("click", function () {
+  elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) + 1;
+});
+
+elDecBtn.addEventListener("click", function () {
+  if (parseInt(elCountDisplay.textContent, 10) > 0) {
+    elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) - 1;
+  }
+});
+
+elAddToCartBtn.onclick = () => {
+  elCartCount.textContent = elCountDisplay.textContent;
+  let sum = +elCountDisplay.textContent * 125;
+  elCalculatedPrice.innerHTML = `$125.00 x ${elCountDisplay.textContent}<span class="bold">$${sum}.00</span>`;
+  console.log(sum);
 };
