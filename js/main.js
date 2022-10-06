@@ -137,6 +137,7 @@ const elCountDisplay = document.querySelector(".js-count-display");
 const elAddToCartBtn = document.querySelector(".btns__cart");
 const elCalculatedPrice = document.querySelector(".info__price");
 const elDellSelected = document.querySelector(".inner__delete");
+const elInnerBtn = document.querySelector(".inner__btn");
 
 elIncBtn.addEventListener("click", function () {
   elCountDisplay.textContent = parseInt(elCountDisplay.textContent, 10) + 1;
@@ -152,11 +153,21 @@ elAddToCartBtn.onclick = () => {
   elCartCount.textContent = elCountDisplay.textContent;
   let sum = +elCountDisplay.textContent * 125;
   elCalculatedPrice.innerHTML = `$125.00 x ${elCountDisplay.textContent}<span class="bold">$${sum}.00</span>`;
-  console.log(sum);
+  elCountDisplay.textContent = "0";
+  elCartInner.classList.add("open");
+  elCartCloseWindow.classList.add("open");
 };
 
 elDellSelected.onclick = () => {
   elCalculatedPrice.innerHTML = `$125.00 x ${0}<span class="bold">$${0}.00</span>`;
   elCartCount.textContent = "0";
   elCountDisplay.textContent = "0";
+};
+
+elInnerBtn.onclick = () => {
+  elCartCount.textContent = "0";
+  elCountDisplay.textContent = "0";
+  elCartInner.classList.remove("open");
+  elCartCloseWindow.classList.remove("open");
+  elCalculatedPrice.innerHTML = `$125.00 x ${0}<span class="bold">$${0}.00</span>`;
 };
