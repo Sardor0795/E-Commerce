@@ -206,7 +206,7 @@ body::-webkit-scrollbar-track {
 }
 
 .nav__link:hover {
-  color: var(--black);
+  color: var(--main-color);
 }
 
 .nav__link:active {
@@ -1005,6 +1005,7 @@ body::-webkit-scrollbar-track {
   .nav__link {
     color: #1d2026;
   }
+
   .nav__link:hover::after {
     display: none;
     color: var(--main-color);
