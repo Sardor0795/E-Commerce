@@ -1092,6 +1092,9 @@ body::-webkit-scrollbar-track {
   .block__content {
     padding-top: 10px;
   }
+  .modal__btn-wrapper {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1134,6 +1137,16 @@ body::-webkit-scrollbar-track {
     display: block;
     width: 100px;
     height: unset;
+  }
+  .block__thumb:first-child {
+    margin-left: 15px;
+  }
+  .modal .block__thumb:first-child {
+    margin-left: 0;
+  }
+  .modal .block__thumb {
+    width: 75px;
+    height: 60px;
   }
 }
 
